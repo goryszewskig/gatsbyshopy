@@ -1,4 +1,4 @@
-// eslint-disable jsx-a11y/no-onchange
+/* eslint-disable jsx-a11y/no-onchange */
 import React from 'react';
 import { graphql } from 'gatsby';
 import {
@@ -63,7 +63,7 @@ export default function ProductTemplate(props) {
       <Grid>
         <div>
           <h1>{props.data.shopifyProduct.title}</h1>
-          <p> {props.data.shopifyProduct.description}</p>
+          <p>{props.data.shopifyProduct.description}</p>
           {product?.availableForSale && !!selectedVariant && (
             <>
               {product?.variants.length > 1 && (
@@ -83,10 +83,10 @@ export default function ProductTemplate(props) {
               )}
               {!!selectedVariant && (
                 <>
-                  <Price>{selectedVariant.price}</Price>
+                  <Price>£{selectedVariant.price}</Price>
                   <ProductQuantityAdder
-                    variantId={selectedVariant.id}
                     available={selectedVariant.available}
+                    variantId={selectedVariant.id}
                   />
                 </>
               )}

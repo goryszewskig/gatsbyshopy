@@ -8,6 +8,7 @@ export const CheckboxWrapper = styled.div`
   cursor: pointer;
   display: flex;
   background: ${props => (props.checked ? 'black' : 'none')};
+
   > div {
     line-height: 1;
     margin: auto;
